@@ -29,6 +29,14 @@ class CustomUserManager(BaseUserManager):
         return user
 
 """
+curl -X POST http://localhost:8000/api-auth/weight-entry/ -H 'Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjg3MjE5MjUzLCJpYXQiOjE2ODcyMTg5NTMsImp0aSI6IjliYTlkMzk3OWViYzRmZDU4ZTNiMDlhYzdlN2NiODNhIiwidXNlcl9pZCI6MX0.57K7Fw--5UjG_UZa-5rUPNb9irqhHRQqqCUfTOfCHGc' -H "Content-Type: application/json" -d '{"weight": 120}'
+curl -X GET http://localhost:8000/api-auth/all-weights/ -H 'Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjg3MjIwNjQ1LCJpYXQiOjE2ODcyMjAzNDUsImp0aSI6Ijc1ZWY3NDZkYWQ1YjRjZjk4YTQxN2U5YzA4ZjU5NzViIiwidXNlcl9pZCI6MX0.tLHt5qtSGvnj_11nicQ9StUt7Oc6qG_vAkhngXuXA3U'
+curl -X GET http://localhost:8000/api-auth/all-weights/ \
+    curl -X GET http://localhost:8000/api-auth/all-weights/ \
+-H 'Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjg3MjIxNzU0LCJpYXQiOjE2ODcyMTgxNzYsImp0aSI6ImFlYjYyZjdhMGJlMTQ2NTE4YmM0NTRlMjBjYzZiZTgyIiwidXNlcl9pZCI6MX0.k4Y1VYOd0BGBdltUaLAyLsVEPkWzoq-oa6E-6Iruf10'
+
+-H 'Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjg3MjIwNjQ1LCJpYXQiOjE2ODcyMjAzNDUsImp0aSI6Ijc1ZWY3NDZkYWQ1YjRjZjk4YTQxN2U5YzA4ZjU5NzViIiwidXNlcl9pZCI6MX0.tLHt5qtSGvnj_11nicQ9StUt7Oc6qG_vAkhngXuXA3U' \
+
 {
 "username":"jim",
 "password":"Password1231",
@@ -36,6 +44,14 @@ class CustomUserManager(BaseUserManager):
 "first_name":"jim",
 "last_name":"diamond"
 }
+
+{
+"username":"jim",
+"password":"Password1231"
+}
+
+"refresh": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoicmVmcmVzaCIsImV4cCI6MTY4NzMwNDU3NiwiaWF0IjoxNjg3MjE4MTc2LCJqdGkiOiJkM2M5MGUzMTU2ZjI0NDQ5YTNlMDRlYTIxNGIyZWM2NiIsInVzZXJfaWQiOjF9.awmOMy2qLXJn5vQ8BoK8RtysYgzlMWPx6ka-8vj5OkM",
+    "access": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjg3MjE4NDc2LCJpYXQiOjE2ODcyMTgxNzYsImp0aSI6IjkzNmE3NzVjMGUyMjQ2M2NhZmZjY2ZhMGYxMDcwZmRjIiwidXNlcl9pZCI6MX0.GJO9bI76uOXHTuSIcnGTGPLFtFCtpwiBjcHaBUQe6Vs"
 """
 
 class User(AbstractUser, PermissionsMixin):
